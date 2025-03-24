@@ -48,15 +48,16 @@ object Module {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
 
+        val currentTimestamp = System.currentTimeMillis()
+
         return OkHttpClient().newBuilder()
             .addInterceptor { chain ->
                 val currentTimeStamp = System.currentTimeMillis()
                 val newUrl = chain.request().url
                     .newBuilder()
-                    .addQueryParameter(Consts.TS, currentTimeStamp.toString())
-                    .addQueryParameter(Consts.APIKEY, Consts.PUBLIC_KEY)
-                    .addQueryParameter(Consts.HASH,
-                        providesMd5Hash(currentTimeStamp.toString() + Consts.PRIVATE_KEY + Consts.PUBLIC_KEY))
+                    .addQueryParameter("ts",currentTimestamp.toString())
+                    .addQueryParameter("apikey",Consts.PUBLIC_KEY)
+                    .addQueryParameter("hash", providesMd5Hash(currentTimeStamp.toString() + Consts.PRIVATE_KEY + Consts.PUBLIC_KEY ))
                     .build()
 
                 val newRequest = chain.request()
@@ -105,5 +106,6 @@ object Module {
         }
         Timber.d("hash-> $encryptString")
         return encryptString ?: ""
+
     }
 }
