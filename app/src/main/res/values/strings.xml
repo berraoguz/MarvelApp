@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Marvel App</string>
+
+    <!--    Splash Activity -->
+    <string name="marvel">MARVEL</string>
+
+    <!--    Item character and Item comic -->
+    <string name="tx_item_name">Name</string>
+    <string name="tv_item_description">Success comes from wanting, determination, and persistence in reaching a goal.</string>
+    <string name="text_description_empty">This character has no description.</string>
+    <string name="comics">Comics</string>
+
+    <!--    Details Character Fragment -->
+    <string name="empty_list_comics">This character has no comics</string>
+    <string name="close_dialog">Close</string>
+
+    <!--    Search Character Fragment -->
+    <string name="search_hint">Search for a character</string>
+
+    <!--    Dialog delete -->
+    <string name="dialog_title_text">DELETE</string>
+    <string name="dialog_message_text">Do you really want to delete this character?</string>
+    <string name="dialog_positive_text">Delete</string>
+    <string name="dialog_negative_text">Cancel</string>
+
+    <!--    Favorite Character Fragment -->
+    <string name="message_delete_character">Deleted successfully!</string>
+    <string name="tv_empty_text">Nothing here.</string>
+
+    <!--    Menu details -->
+    <string name="favorite">Favorite</string>
+
+    <!--    Toast messages -->
+    <string name="an_error_occurred">An error occurred!</string>
+    <string name="saved_successfully">Saved successfully!</string>
+    <string name="textDescriptionEmpty">Description Unavailable</string>
+    <string name="on_error">Error in query</string>
+
+    <string name="undo">Undo</string>
+
+</resources>
